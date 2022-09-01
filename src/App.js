@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Welcome from "./components/Welcome";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Home from "./components/Home";
+import { useSelector } from "react-redux";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
+  const store = useSelector((state) => state.store);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <ProtectedRoute user={store.token}>
+            <Home />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route path="/welcome" element={<Welcome />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+    </Routes>
   );
 }
 
