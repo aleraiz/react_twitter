@@ -1,31 +1,38 @@
-import React from "react";
+import { useState } from "react";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
-import { logIn } from "../redux/storeSlice";
+import { logIn } from "../../redux/storeSlice";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const store = useSelector((state) => state.store);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+
   const tryLogin = (e) => {
     e.preventDefault();
     const userData = async () => {
+      setError(null);
       const result = await axios({
-        method: "post",
-        baseURL: `http://localhost:8000/login`,
-        url: `/${e.target[0].value}/${e.target[1].value}`,
+        method: "POST",
+        url: `http://localhost:8000/login`,
+        data: {
+          emailOrUsername: username,
+          password: password,
+        },
       });
-      console.log(result.data);
       dispatch(logIn(result.data));
-      console.log(store);
-      navigate("/");
+      if (result.data.message) {
+        console.log(result.data.message);
+        setError(result.data.message);
+      } else {
+        navigate("/");
+      }
     };
-
     userData();
-
-    console.log(e.target[0].value);
-    console.log(e.target[1].value);
   };
 
   return (
@@ -34,6 +41,7 @@ const Login = () => {
         <h2>Ingresar</h2>
         <br />
         <br />
+        {error && <p>{error}</p>}
         <form onSubmit={tryLogin}>
           <div className="form-floating">
             <input
@@ -42,6 +50,9 @@ const Login = () => {
               className="form-control bg-transparent"
               id="emailOrUsername"
               placeholder="email"
+              onChange={(e) => {
+                setUsername(e.target.value);
+              }}
             />
             <label htmlFor="emailOrUsername" className="registerLabels">
               {" "}
@@ -57,6 +68,9 @@ const Login = () => {
               className="form-control bg-transparent"
               id="password"
               placeholder="password"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
             />
             <label htmlFor="password" className="registerLabels">
               {" "}
