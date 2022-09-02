@@ -18,7 +18,7 @@ const Login = () => {
       setError(null);
       const result = await axios({
         method: "POST",
-        url: `http://localhost:8000/login`,
+        url: `http://localhost:8000/login/`,
         data: {
           emailOrUsername: username,
           password: password,
