@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function Footer() {
   const [recomended, setRecomended] = React.useState();
+  const [hasFollowed, setHasFollowed] = React.useState(false);
   const store = useSelector((state) => state.store);
   React.useEffect(() => {
     const getRecomendedUsers = async () => {
@@ -19,6 +20,17 @@ export default function Footer() {
     };
     getRecomendedUsers();
   }, []);
+
+  React.useEffect(() => {
+    const getRecomendedUsers = async () => {
+      const result = await axios({
+        method: "get",
+        url: `http://localhost:8000/user/recomended/${store.userId}`,
+      });
+      setRecomended(result.data.recomendedUsers);
+    };
+    getRecomendedUsers();
+  }, [hasFollowed]);
 
   return (
     <>
@@ -45,7 +57,13 @@ export default function Footer() {
           <h5>Recomendados</h5>
           {recomended &&
             recomended.map((user) => {
-              return <RecomendedUserCard user={user} />;
+              return (
+                <RecomendedUserCard
+                  user={user}
+                  setHasFollowed={setHasFollowed}
+                  hasFollowed={hasFollowed}
+                />
+              );
             })}
         </div>
       </div>

@@ -53,6 +53,10 @@
   align-items: flex-start;
   width: 50%;
 }
+.recomendedTexts:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 .recomendedTitle {
   font-size: 1rem;
