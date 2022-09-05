@@ -18,33 +18,33 @@ function App() {
         <Route
           path="/"
           element={
-            <ProtectedRoute user={store}>
-              <Home />
-            </ProtectedRoute>
+            // <ProtectedRoute user={store}>
+            <Home />
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/mainProfile"
           element={
-            <ProtectedRoute user={store}>
-              <Profile />
-            </ProtectedRoute>
+            // <ProtectedRoute user={store}>
+            <Profile />
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/profile"
           element={
-            <ProtectedRoute user={store}>
-              <UserProfile />
-            </ProtectedRoute>
+            // <ProtectedRoute user={store}>
+            <UserProfile />
+            // </ProtectedRoute>
           }
         />
         <Route
           path="/follows"
           element={
-            <ProtectedRoute user={store}>
-              <Follows />
-            </ProtectedRoute>
+            // <ProtectedRoute user={store}>
+            <Follows />
+            // </ProtectedRoute>
           }
         />
         <Route path="/welcome" element={<Welcome />} />

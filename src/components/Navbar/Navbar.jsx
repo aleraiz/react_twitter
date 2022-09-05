@@ -37,37 +37,50 @@ export default function Navbar() {
                 }}
               >
                 <i className="fa-sharp fa-solid fa-house icon"></i>
-                <span className="navbarButtonText"> Home</span>
+                <span className="navbarButtonText d-none d-lg-inline">
+                  {" "}
+                  Home
+                </span>
               </button>
             </li>
             <li>
               <button className="navbarButton">
                 <i className="fa-sharp fa-solid fa-hashtag icon"></i>
-                <span className="navbarButtonText">Explore</span>
+                <span className="navbarButtonText d-none d-lg-inline">
+                  Explore
+                </span>
               </button>
             </li>
             <li>
               <button className="navbarButton">
                 <i className="fa-regular fa-bell icon"></i>
-                <span className="navbarButtonText">Notifications</span>
+                <span className="navbarButtonText d-none d-lg-inline">
+                  Notifications
+                </span>
               </button>
             </li>
             <li>
               <button className="navbarButton">
                 <i className="fa-regular fa-envelope icon"></i>
-                <span className="navbarButtonText">Messages</span>
+                <span className="navbarButtonText d-none d-lg-inline">
+                  Messages
+                </span>
               </button>
             </li>
             <li>
               <button className="navbarButton">
                 <i className="fa-regular fa-bookmark icon"></i>
-                <span className="navbarButtonText">Bookmarks</span>
+                <span className="navbarButtonText d-none d-lg-inline">
+                  Bookmarks
+                </span>
               </button>
             </li>
             <li>
               <button className="navbarButton">
                 <i className="fa-sharp fa-solid fa-bars icon"></i>
-                <span className="navbarButtonText">Lists</span>
+                <span className="navbarButtonText d-none d-lg-inline">
+                  Lists
+                </span>
               </button>
             </li>
             <li>
@@ -84,13 +97,17 @@ export default function Navbar() {
                     alt="profile"
                   />
                 )}
-                <span className="navbarButtonText">Profile</span>
+                <span className="navbarButtonText d-none d-lg-inline">
+                  Profile
+                </span>
               </button>
             </li>
             <li>
               <button className="navbarButton">
                 <i className="fa-solid fa-plus icon"></i>
-                <span className="navbarButtonText">More</span>
+                <span className="navbarButtonText d-none d-lg-inline">
+                  More
+                </span>
               </button>
             </li>
           </ul>
@@ -103,8 +120,8 @@ export default function Navbar() {
               navigate("/welcome");
             }}
           >
-            <i class="fa-solid fa-right-from-bracket icon"></i>
-            <span className="logOutBtnText">LogOut</span>
+            <i className="fa-solid fa-right-from-bracket icon"></i>
+            <span className="logOutBtnText d-none d-lg-inline">LogOut</span>
           </button>
         </div>
       </div>

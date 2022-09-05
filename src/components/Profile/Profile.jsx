@@ -5,13 +5,19 @@ import arrowBack from "./arrow-left-solid.svg";
 import fondoPerfil from "./fondoPerfil.jpg";
 import defaultProfile from "./default.jpg";
 import { useNavigate } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import EditProfile from "./EditProfile";
 
 export default function Profile() {
+  const [modalShow, setModalShow] = React.useState(false);
   const navigate = useNavigate();
   return (
-    <div className="container d-flex p-2">
-      <div className="col-3 bg-primary vh-100">Navbar</div>
-      <div className="col-6 min-vh-100">
+    <div className="container justify-content-md-between d-flex p-2">
+      <div className="d-none col-md-1 d-md-block col-lg-3">
+        <Navbar />
+      </div>
+      <div className="col-12 col-md-11 col-lg-6 min-vh-100 mx-md-3">
         <div className="d-flex px-3 bg-light">
           <div className="d-flex justify-content-center align-items-center me-4 ">
             <img
@@ -48,7 +54,10 @@ export default function Profile() {
                 />
               </div>
               <div>
-                <button className="btn border-secondary rounded-pill">
+                <button
+                  className="btn border-secondary rounded-pill"
+                  onClick={() => setModalShow(true)}
+                >
                   <span className="fw-bold">Editar perfil </span>
                 </button>
               </div>
@@ -88,7 +97,10 @@ export default function Profile() {
         </div>
         <div className="px-2">Seccion tweets</div>
       </div>
-      <div className="col-3 bg-secondary vh-100">Footer</div>
+      <div className="d-none col col-lg-3 d-lg-block">
+        <Footer />
+      </div>
+      <EditProfile show={modalShow} onHide={() => setModalShow(false)} />
     </div>
   );
 }

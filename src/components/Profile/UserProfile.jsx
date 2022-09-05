@@ -12,9 +12,11 @@ export default function UserProfile() {
   const navigate = useNavigate();
   return (
     <div className="container d-flex p-2">
-      <div className="col-3 bg-primary vh-100">Navbar</div>
-      {/* <div className="col-6 bg-success min-vh-100">Main</div> */}
-      <div className="col-6 min-vh-100">
+      <div className="d-none col-md-1 d-md-block col-lg-3">
+        <Navbar />
+      </div>
+
+      <div className="col-12 col-md-11 col-lg-6 min-vh-100 mx-md-3">
         <div className="d-flex px-3 bg-light">
           <div className="d-flex justify-content-center align-items-center me-4 ">
             <img
@@ -103,7 +105,9 @@ export default function UserProfile() {
         </div>
         <div className="px-2">Seccion tweets</div>
       </div>
-      <div className="col-3 bg-secondary vh-100">Footer</div>
+      <div className="d-none col col-lg-3 d-lg-block">
+        <Footer />
+      </div>
     </div>
   );
 }

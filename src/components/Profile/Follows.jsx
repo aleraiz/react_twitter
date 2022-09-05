@@ -12,8 +12,7 @@ export default function Follows() {
   const navigate = useNavigate();
   return (
     <div className="container d-flex p-2">
-      <div className="col-3 bg-primary vh-100">Navbar</div>
-      {/* <div className="col-6 bg-success min-vh-100">Main</div> */}
+      <Navbar />
       <div className="col-6 min-vh-100">
         <div className="d-flex px-3 bg-light">
           <div className="d-flex justify-content-center align-items-center me-4 ">
@@ -67,7 +66,7 @@ export default function Follows() {
         </div>
       </div>
 
-      <div className="col-3 bg-secondary vh-100">Footer</div>
+      <Footer />
     </div>
   );
 }
