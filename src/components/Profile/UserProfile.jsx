@@ -1,10 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import arrowBack from "./arrow-left-solid.svg";
-import ellipsis from "./ellipsis-solid.svg";
 import fondoPerfil from "./fondoPerfil.jpg";
-import defaultProfile from "./default.jpg";
 import { useNavigate } from "react-router-dom";
 import FollowButton from "./FollowButton";
 
@@ -20,7 +17,7 @@ export default function UserProfile() {
         <div className="d-flex px-3 bg-light">
           <div className="d-flex justify-content-center align-items-center me-4 ">
             <img
-              src={arrowBack}
+              src={`./img/arrow-left-solid.svg`}
               style={{ width: "20px", height: "20px", cursor: "pointer" }}
               alt="arrowBack"
             />
@@ -49,7 +46,7 @@ export default function UserProfile() {
               >
                 <img
                   className="rounded-circle"
-                  src={defaultProfile}
+                  src={`./img/default.jpg`}
                   style={{ width: "100px", height: "100px" }}
                   alt=""
                 />
@@ -61,7 +58,7 @@ export default function UserProfile() {
                 >
                   <img
                     className=""
-                    src={ellipsis}
+                    src={`./img/ellipsis-solid.svg`}
                     style={{ width: "30px", height: "30px", cursor: "pointer" }}
                     alt="arrowBack"
                   />
@@ -81,7 +78,7 @@ export default function UserProfile() {
 
             <div className="d-flex mt-2">
               <div
-                className="me-3"
+                className="me-3 hover-underline"
                 style={{ cursor: "pointer" }}
                 onClick={() => {
                   navigate("/follows");
@@ -91,7 +88,7 @@ export default function UserProfile() {
                 <span className="ms-1">Seguidores</span>
               </div>
               <div
-                className="me-3"
+                className="me-3 hover-underline"
                 style={{ cursor: "pointer" }}
                 onClick={() => {
                   navigate("/follows");
