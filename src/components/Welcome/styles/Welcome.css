@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .blueBorderSelected {
+    border: 5px solid #0d6efd;
+  }
+  
+  /* /////////// WELCOME ///////////*/
+
+  
+  .bg-welcome {
+    background-image: url('../assets/welcomeWallpaperLight.png');
+    margin: 0;
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+  /* .row{
+    height: 100vh;
+  } */
+
+  #welcomeImgDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #welcomeImg {
+    object-fit: contain;
+    max-width: 400px;
+    max-height: 400px;
+    filter: brightness(0) invert(1);
+    position: relative;
+    z-index:3 ;
+  }
+
+
+  .twitterLogo{
+     width: 10%;
+  }
+  #welcomeModals {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: space-around !important;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .welcomeTitle {
+    color: rgb(0, 0, 0);
+    font-size: 3.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  h3{
+    font-size: 2.2rem;
+    font-weight: bolder;
+    margin: 5% 0 2%;
+  }
+
+  .btn-google{
+    border: 1px solid grey;
+    color: grey;
+    font-weight: bolder;
+    margin-bottom:  1%;
+    width: 35%;
+}
+
+.btn-google:hover{
+    border: 1px solid grey;
+    color: grey;
+    background-color: rgb(250, 247, 247);
+}
+
+.btn-apple{
+    border: 1px solid grey;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    width: 35%;
+}
+
+.btn-apple:hover{
+    border: 1px solid grey;
+    background-color: rgb(250, 247, 247);
+    color: #000;
+    font-weight: bolder;
+}
+
+#buttonRegisterModal{
+    background-color: #1D9BF0;
+    color: #fff;
+    height: 43px;
+    width: 100%;
+}
+
+#buttonRegisterModal:hover{
+    background-color: #1A8CD8;
+}
+
+.terms-text{
+    color: #8E8989;
+    font-size: 11px;
+    font-weight: initial;
+    margin-top: 2%;
+}
+
+span{
+    color: #70B7E7;
+}
+
+span:hover{
+    text-decoration: underline;
+}
+
+#buttonLoginModal{
+    border: 1px solid #CFD9DE;
+    color: #1D9BF0;
+    width: 300px;
+}
+
+#buttonLoginModal:hover{
+   background-color:#E8F5FD ;
+}
+
+#prev-reg{
+    text-align: center;
+}
+
+#login{
+    margin-top: 5%;
+}
+
+.login-text{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+  /* ---------------- MODALS ---------*/
+.loginModal {
+    background-color: rgb(255, 255, 255);
+    height: 600px;
+    max-width: 35%;
+    color: rgb(0, 0, 0);
+}
+  
+.loginModalBg {
+    /* position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s opacity 0.5s;
+    z-index: 1; */
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 90%;
+}
+  
+ hr{
+  width: 20%;
+  
+ }
+  
+.registerModal {
+    background-color: rgb(255, 255, 255);
+    max-width: 35%;
+    color: rgb(0, 0, 0);
+}
+  
+  /* .registerModalBg { */
+    /* position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s opacity 0.5s;
+    z-index: 1; */
+  /* } */
+  
+  /* .registerModalActive {
+    visibility: visible;
+    opacity: 1;
+  }
+   */
+.registerLabels {
+    color: rgb(127, 127, 127);
+}
+  
