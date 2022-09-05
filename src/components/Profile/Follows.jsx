@@ -1,10 +1,6 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import arrowBack from "./arrow-left-solid.svg";
-import ellipsis from "./ellipsis-solid.svg";
-import fondoPerfil from "./fondoPerfil.jpg";
-import defaultProfile from "./default.jpg";
 import { useNavigate } from "react-router-dom";
 import FollowingButton from "./FollowingButton";
 
@@ -17,7 +13,7 @@ export default function Follows() {
         <div className="d-flex px-3 bg-light">
           <div className="d-flex justify-content-center align-items-center me-4 ">
             <img
-              src={arrowBack}
+              src={`./img/arrow-left-solid.svg`}
               style={{ width: "20px", height: "20px", cursor: "pointer" }}
               alt="arrowBack"
             />
@@ -49,7 +45,7 @@ export default function Follows() {
             <div className="col-1">
               <img
                 className="rounded-circle"
-                src={defaultProfile}
+                src={`./img/default.jpg`}
                 style={{ width: "50px", height: "50px" }}
                 alt=""
               />
