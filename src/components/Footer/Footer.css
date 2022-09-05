@@ -1,0 +1,91 @@
+.footerDiv {
+  height: 100vh;
+  width: 20vw;
+}
+
+.footerSearch {
+  background-color: #e1e8ed;
+  border-radius: 9999px;
+  border: none;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.tendencias {
+  background-color: #e1e8ed;
+  border-radius: 10px;
+  padding: 5%;
+  margin: 20px 0;
+}
+
+.tendenciaTitle {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.tendenciaCard:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tendenciaInfo {
+  color: #657786;
+  font-size: 1rem;
+}
+
+.recomendados {
+  background-color: #e1e8ed;
+  border-radius: 10px;
+  padding: 5%;
+  margin: 20px 0;
+}
+
+.recomendedUserCard {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.recomendedTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+}
+
+.recomendedTitle {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.recomendedUser {
+  color: #657786;
+  font-size: 1rem;
+}
+
+.recomendedFollow {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  height: 33%;
+  padding: 2% 5%;
+}
+
+.recomendedImage {
+  border-radius: 50%;
+  padding: 0 5px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .recomendedUser {
+    display: none;
+  }
+}
+/* 
+@media only screen and (max-width: 992px) {
+  .footerDiv {
+    display: none;
+  }
+} */

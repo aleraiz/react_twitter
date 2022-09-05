@@ -20,7 +20,7 @@ const Welcome = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container bg-welcome">
       <div className="row ">
         <div className="d-flex flex-column-reverse flex-md-row">
           <div className="col col-12 col-md-6" id="welcomeImgDiv">

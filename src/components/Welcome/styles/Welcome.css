@@ -9,19 +9,17 @@
   }
   
   /* /////////// WELCOME ///////////*/
-  body {
-    background-image: url('../assets/welcomeWallpaperLight.png');
-   
-  }
+
   
-  .container {
+  .bg-welcome {
+    background-image: url('../assets/welcomeWallpaperLight.png');
     margin: 0;
     max-width: 100vw;
     max-height: 100vh;
   }
-  .row{
+  /* .row{
     height: 100vh;
-  }
+  } */
 
   #welcomeImgDiv {
     display: flex;
