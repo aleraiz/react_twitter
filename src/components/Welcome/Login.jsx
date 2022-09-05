@@ -35,67 +35,65 @@ const Login = () => {
     userData();
   };
 
-  return (
-    <div className="loginModalBg">
-      <div className="col loginModal p-3 border border-1 shadow rounded">
-        <h2>Ingresar</h2>
-        <br />
-        <br />
-        {error && <p>{error}</p>}
-        <form onSubmit={tryLogin}>
-          <div className="form-floating">
-            <input
-              type="text"
-              name="emailOrUsername"
-              className="form-control bg-transparent"
-              id="emailOrUsername"
-              placeholder="email"
-              onChange={(e) => {
-                setUsername(e.target.value);
-              }}
-            />
-            <label htmlFor="emailOrUsername" className="registerLabels">
-              {" "}
-              Email or Username{" "}
-            </label>
-            <br />
-            <br />
-          </div>
-          <div className="form-floating">
-            <input
-              type="password"
-              name="password"
-              className="form-control bg-transparent"
-              id="password"
-              placeholder="password"
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-            />
-            <label htmlFor="password" className="registerLabels">
-              {" "}
-              Password{" "}
-            </label>
-            <br />
-            <br />
-          </div>
-          <button
-            type="submit"
-            className="btn btn-primary rounded-pill px-5 fw-bold fs-5  float-end"
-            name="login"
-          >
-            Ingresar
-          </button>
-        </form>
-        <button
-          className="btn btn-secondary rounded-pill"
-          id="buttonCloseLoginModal"
-        >
-          Close
-        </button>
-      </div>
-    </div>
-  );
+  // <div className="loginModalBg">
+  //   <div className="col loginModal p-3 border border-1 shadow rounded">
+  //     <h2>Ingresar</h2>
+  //     <br />
+  //     <br />
+  //     {error && <p>{error}</p>}
+  //     <form onSubmit={tryLogin}>
+  //       <div className="form-floating">
+  //         <input
+  //           type="text"
+  //           name="emailOrUsername"
+  //           className="form-control bg-transparent"
+  //           id="emailOrUsername"
+  //           placeholder="email"
+  //           onChange={(e) => {
+  //             setUsername(e.target.value);
+  //           }}
+  //         />
+  //         <label htmlFor="emailOrUsername" className="registerLabels">
+  //           {" "}
+  //           Email or Username{" "}
+  //         </label>
+  //         <br />
+  //         <br />
+  //       </div>
+  //       <div className="form-floating">
+  //         <input
+  //           type="password"
+  //           name="password"
+  //           className="form-control bg-transparent"
+  //           id="password"
+  //           placeholder="password"
+  //           onChange={(e) => {
+  //             setPassword(e.target.value);
+  //           }}
+  //         />
+  //         <label htmlFor="password" className="registerLabels">
+  //           {" "}
+  //           Password{" "}
+  //         </label>
+  //         <br />
+  //         <br />
+  //       </div>
+  //       <button
+  //         type="submit"
+  //         className="btn btn-primary rounded-pill px-5 fw-bold fs-5  float-end"
+  //         name="login"
+  //       >
+  //         Ingresar
+  //       </button>
+  //     </form>
+  //     <button
+  //       className="btn btn-secondary rounded-pill"
+  //       id="buttonCloseLoginModal"
+  //     >
+  //       Close
+  //     </button>
+  //   </div>
+  // </div>
 };
 
 export default Login;

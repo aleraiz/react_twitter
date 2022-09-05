@@ -1,8 +1,8 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Welcome from "./components/Welcome/Welcome";
-import Login from "./components/Welcome/Login";
 import Register from "./components/Welcome/Register";
+import Login from "./components/Welcome/Login";
 import Home from "./components/HomePage/Home";
 import { useSelector } from "react-redux";
 import ProtectedRoute from "./components/ProtectedRoute";
